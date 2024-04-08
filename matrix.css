@@ -1,0 +1,82 @@
+.card {
+    background: linear-gradient(145deg, #9a9a9a, #767575);
+    border-radius: 30px;
+    padding: 20px;
+    width: 80%;
+    /* Largeur ajustée comme nécessaire */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin: auto;
+    /* Auto pour centrer également dans la direction de la hauteur si le contenu est moins que 100vh */
+    margin-top: 20px;
+    background-image: url('1coreblure.png');
+    background-size: cover;
+}
+
+@media (min-width: 768px) {
+    .card {
+        width: 30%;
+    }
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    color: #FFD700;
+    font-size: 1.5rem;
+}
+
+.balance {
+    color: #FFD700;
+    font-size: 1rem;
+}
+
+.locks-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 items per row */
+    gap: 10px;
+    justify-items: center;
+    margin-bottom: 20px;
+}
+
+.lock-square {
+    background-color: #535252;
+    /* Gray background for lock square */
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lock-square .fa-lock {
+    color: #ffffff;
+    /* Lock icon color */
+    font-size: 20px;
+}
+
+.preview-button {
+    background-color: #FFD700;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    /* Make the button block level for full-width */
+    width: 100%;
+    /* Full width */
+    text-align: center;
+}
+
+.preview-button:hover {
+    background-color: #ffca28;
+    /* Lighter yellow on hover */
+}

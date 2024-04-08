@@ -1,0 +1,54 @@
+.connect-wallet {
+    padding: 10px 25px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #1a1a1a;
+    background: #FFC107; /* Starting color */
+    border: 2px solid #FFC107; /* Golden yellow border */
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s, border-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for 3D effect */
+    text-align: center;
+    margin-top: -20px;
+    margin-left: 5px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.connect-wallet::before {
+    content: '';
+    position: absolute;
+    top: -2px; right: -2px; bottom: -2px; left: -2px;
+    z-index: -1;
+    background: linear-gradient(45deg, #FFD700, #DAA520, #FFD700, #DAA520);
+    background-size: 300% 300%;
+    border-radius: 30px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.connect-wallet:hover::before {
+    opacity: 1;
+    animation: borderAnim 2s infinite linear;
+}
+
+@keyframes borderAnim {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.connect-wallet:hover {
+    color: #333; /* Change text color on hover */
+    background: #FFD700; /* Brighter yellow on hover */
+    box-shadow: 0 0 15px rgba(218, 165, 32, 0.75); /* Intensify glow on hover */
+}
+
+/* 3D effect on the button text */
+.connect-wallet:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 10px rgba(218, 165, 32, 0.5);
+}

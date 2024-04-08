@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1core | Dashboard</title>
+    <link rel="stylesheet" href="core.css">
+    <link rel="stylesheet" href="btn.css">
+    <link rel="stylesheet" href="claim.css">
+    <link rel="stylesheet" href="matrix.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-icon">
+            <i class="fas fa-bars"></i> <span id="menu">Menu</span> <!-- Texte de repli -->
+        </div>
+
+        <div class="nav-menu" style="background-image: url('20240404_103500.png'); background-size: cover;">
+            <a href="activities.html" class="nav-item">
+                <i class="fas fa-history"></i> Recent Activities
+            </a>
+            <a href="partners.html" class="nav-item">
+                <i class="fas fa-handshake"></i> Partners
+            </a>
+            <a href="#calculator" class="nav-item">
+                <i class="fas fa-calculator"></i> Calculator
+            </a>
+            <a href="#core-price" class="nav-item">
+                <i class="fas fa-chart-line"></i> Core Price
+            </a>
+
+            <!-- Footer content -->
+
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+
+            <div class="user-info">
+
+                <img src="1coredao.png" alt="Username" class="user-image">
+                <div class="user-details">
+                    <div class="user-name">Daniel Dao</div>
+                    <div class="user-id">ID: <span class="user-id-number">120</span></div>
+                    <div class="user-id">Upline: <span class="user-id-number">ID 1</span></div>
+                    <div class="link-container">
+                        <input style="width:80px; overflow: hidden; border-radius: 50px;" type="text" id="linkField"
+                            class="user-id" value="https://1core.io/register.html?id=1" readonly>
+                        <button onclick="copyLink()" class="copy-button" style="border-radius: 10px;">Copy</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <button class="connect-wallet">Connect</button>
+
+        </header>
+        <div class="metrics-container">
+            <div class="metric team-income">
+                <div class="metric-title">Team Income</div>
+                <div class="metric-value">$0.00</div>
+            </div>
+            <div class="metric free-income">
+                <div class="metric-title">Total Income</div>
+                <div class="metric-value">$0.00</div>
+            </div>
+            <div class="metric direct-partners">
+                <div class="metric-title">Direct</div>
+                <div class="metric-value">0</div>
+            </div>
+            <div class="metric team">
+                <div class="metric-title">Team</div>
+                <div class="metric-value">0</div>
+            </div>
+        </div>
+
+
+
+        <div class="flexim">
+
+            <!-- For Mobile Claim Container -->
+
+            <div class="claim-container mobile">
+                <h2 style="font-size: 1em;">Dividendes Available</h2>
+                <div class="amount-display">
+                    <span class="crypto-icon">🪙</span>
+                    <span class="amount" style="font-size: 0.8em;" id="AvailableDivs">0.0000000 <span>Core</span></span>
+                </div>
+                <button class="claim-button" onclick="claim()">CLAIM</button>
+            </div>
+
+
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="title">Bitcore</h1>
+                    <span class="balance">0.00 USD</span>
+                </div>
+                <div class="card-content">
+                    <div class="locks-grid">
+                        <!-- Repeat for each lock icon -->
+                        <div class="lock-square"><i class="fas fa-lock"></i></div>
+                        <div class="lock-square"><i class="fas fa-lock"></i></div>
+                        <div class="lock-square"><i class="fas fa-lock"></i></div>
+                        <div class="lock-square"><i class="fas fa-lock"></i></div>
+                        <div class="lock-square"><i class="fas fa-lock"></i></div>
+                        <div class="lock-square"><i class="fas fa-lock"></i></div>
+                        <div class="lock-square"><i class="fas fa-lock"></i></div>
+                        <div class="lock-square"><i class="fas fa-lock"></i></div>
+                        <div class="lock-square"><i class="fas fa-lock"></i></div>
+                        <div class="lock-square"><i class="fas fa-lock"></i></div>
+
+                        <!-- ... (x25 for 5x5 grid) -->
+                    </div>
+                </div>
+                <button class="preview-button">Preview →</button>
+            </div>
+            <!-- For DeskTop claim container-->
+
+            <div class="claim-container desktop">
+                <h2 style="font-size: 1em;">Dividendes Available</h2>
+                <div class="amount-display">
+                    <span class="crypto-icon">🪙</span>
+                    <span class="amount" style="font-size: 0.8em;" id="AvailableDivs">0.0000000 <span>Core</span></span>
+                </div>
+                <button class="claim-button" onclick="claim()">CLAIM</button>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="title">Bitcore</h1>
+                    <span class="balance">0.00 USD</span>
+                </div>
+                <div class="card-content">
+                    <div class="locks-grid">
+                        <!-- Repeat for each lock icon -->
+                        <div class="lock-square"><i class="fas fa-lock"></i></div>
+                        <div class="lock-square"><i class="fas fa-lock"></i></div>
+                        <div class="lock-square"><i class="fas fa-lock"></i></div>
+                        <div class="lock-square"><i class="fas fa-lock"></i></div>
+                        <div class="lock-square"><i class="fas fa-lock"></i></div>
+                        <div class="lock-square"><i class="fas fa-lock"></i></div>
+                        <div class="lock-square"><i class="fas fa-lock"></i></div>
+                        <div class="lock-square"><i class="fas fa-lock"></i></div>
+                        <div class="lock-square"><i class="fas fa-lock"></i></div>
+                        <div class="lock-square"><i class="fas fa-lock"></i></div>
+
+                        <!-- ... (x25 for 5x5 grid) -->
+                    </div>
+                </div>
+                <button class="preview-button">Preview →</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="core.js"></script>
+</body>
+
+</html>

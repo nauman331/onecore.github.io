@@ -1,0 +1,289 @@
+body,
+html {
+    margin: 0;
+    padding: 5px;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: white;
+    margin-top: 2rem;
+
+}
+
+.dashboard-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 1.2rem;
+}
+
+.user-id {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+
+
+.metrics-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 10px;
+}
+
+.metric {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+
+}
+
+.metric.team-income,
+.metric.free-income {
+    background-image: url('20240404_103500.png');
+    background-size: cover;
+}
+
+.metric.direct-partners {
+    background-image: url('virtual_20240404_104212_0000.png');
+    background-size: cover;
+}
+
+.metric.team {
+    background-image: url('community_20240404_105050_0000.png');
+    background-size: cover;
+}
+
+
+.metric:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.metric-title {
+    font-size: 0.8em;
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+.metric-value {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    /* Adjust as needed */
+    border-radius: 8px;
+    /* Rounded corners for a modern look */
+    margin-bottom: 1rem;
+    /* Space below the user info section */
+    width: 110px;
+}
+
+.user-image {
+    width: 80px;
+    /* Larger size for visibility */
+    height: 80px;
+    border-radius: 40px;
+    /* Circular image */
+    object-fit: cover;
+    /* Ensure the image covers the area without distortion */
+    border: 2px solid #ffaa00;
+    /* Bright border color for emphasis */
+    margin-right: 16px;
+    /* Space between image and user details */
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-bottom: 4px;
+    /* Space between username and ID */
+}
+
+.user-id {
+    font-size: 0.9rem;
+    color: #AAAAAA;
+    /* Lighter color for less emphasis */
+}
+
+.user-id-number {
+    color: #ffaa00;
+    /* Highlight color for the user ID */
+    font-weight: bold;
+}
+
+.desktop {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .user-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .user-image {
+        margin-right: 0;
+        margin-bottom: 8px;
+        /* Space below image on smaller screens */
+    }
+}
+
+.dashboard-header {
+    border: 2px solid #ffaa00;
+    border-radius: 30px;
+}
+
+.metric {
+    border-left: 1.5px solid #ffaa00;
+    border-right: 1.5px solid #ffaa00;
+
+    border-radius: 30px;
+}
+
+.metric-value {
+    color: #ffaa00
+}
+
+.dashboard-header {
+    background: none;
+}
+
+.user-info {
+    background: none;
+}
+
+.link-container {
+    display: flex;
+    align-items: center;
+    background: #1a1a1a;
+    /* Background color of the container */
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+
+.user-id {
+    border: none;
+    background: transparent;
+    color: #ffd700;
+    margin-right: 10px;
+    flex-grow: 1;
+    /* Take up remaining space */
+    border-radius: 5px;
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.copy-button {
+    padding: 5px 10px;
+    background-color: #FFD700;
+    /* Button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #1a1a1a;
+    font-weight: bold;
+}
+
+.copy-button:hover {
+    background-color: #ffca28;
+    /* Lighter yellow on hover */
+}
+
+input {
+    border-radius: 30px;
+}
+
+@media (min-width: 768px) {
+    .dashboard-header {
+        width: 46%;
+    }
+
+    .metric.metric.free-income {
+        margin-top: -13rem;
+        height: 40px;
+    }
+
+    .metric.team {
+        margin-top: -15rem;
+        height: 40px;
+    }
+
+    .metric.team-income {
+        width: 50%;
+        height: 40px;
+        margin-top: 2rem;
+    }
+
+    .metric.direct-partners {
+        margin-left: 23rem;
+        width: 130%;
+        margin-top: -6.5rem;
+        height: 40px;
+    }
+
+    .flexim {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .claim-container {
+        width: 20%;
+        height: 14rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    .mobile {
+        display: none;
+    }
+}
